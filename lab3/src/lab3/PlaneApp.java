@@ -80,6 +80,7 @@ public class PlaneApp {
 
 			case 7:
 				// Do nothing. Going to terminate
+				System.out.print("Exit already");
 
 				break;
 			}

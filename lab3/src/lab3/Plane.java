@@ -1,5 +1,6 @@
 package lab3;
 
+import java.util.*;
 import java.util.Arrays;
 
 public class Plane {
@@ -19,7 +20,15 @@ public class Plane {
 
 	private PlaneSeat[] sortSeats() {
 		
-		Arrays.sort(seat);
+		Arrays.sort(seat, new Comparator<PlaneSeat>()
+		{
+			public int compare(PlaneSeat ps1, PlaneSeat ps2) 
+			{
+				return ps1.getCustomerID() - ps2.getCustomerID();
+			}
+			
+		});
+		
 		return seat;
 	}
 
@@ -55,7 +64,7 @@ public class Plane {
 		else 
 		{
 			//???
-			//seat = sortSeats();
+			seat = sortSeats();
 
 			for (int i = 0; i < seat.length; i++) {
 				if (seat[i].isOccupied() == true)
@@ -98,10 +107,12 @@ public class Plane {
 		for (int i = 0; i < seat.length; i++) {
 
 			if (seat[i].getSeatID() == seatId) {
-
+				
 				if (seat[i].isOccupied()) {
 
-					seat[seatId].unAssign();
+					seat[i].unAssign();
+					
+					numEmptySeat++;
 
 					System.out.print("Seat Unassigned!");
 
