@@ -1,8 +1,5 @@
 package lab3;
 
-import java.util.*;
-import java.util.Arrays;
-
 public class Plane {
 	private PlaneSeat[] seat;
 
