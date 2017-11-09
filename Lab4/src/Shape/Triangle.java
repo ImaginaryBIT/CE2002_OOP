@@ -17,7 +17,7 @@ public class Triangle implements Shape{
 	}
 	//square-based Pyramid
 	public double area3D() {
-		return 2*height*base;
+		return 4*this.area();
 	}
 	//Cone
 	public double area3D2() {

@@ -10,6 +10,10 @@ public class Rectangle implements Shape{
 		this.height = height;
 		this.breadth = breadth;
 	}
+	
+	public int getBreadth() {
+		return this.breadth;
+	}
 
 	@Override
 	public double area() {
@@ -17,7 +21,7 @@ public class Rectangle implements Shape{
 	}
 	//Cubiod
 	public double area3D() {
-		return 4*height*breadth;
+		return 4*this.area();
 	}
 	//Cylinder
 	public double area3D2() {

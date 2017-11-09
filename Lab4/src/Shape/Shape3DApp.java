@@ -46,13 +46,13 @@ public class Shape3DApp {
 						parameter1 = sc.nextInt();
 						System.out.println("Please enter the breadth.");
 						parameter2 = sc.nextInt();
-						shapes[i] = new Rectangle(parameter1, parameter2);
+						shapes[i] = new Cylinder(parameter1, parameter2);
 						break;
 						
 					case 3:
 						System.out.println("Please enter the radius.");
 						parameter1 = sc.nextInt();
-						shapes[i] = new Circle(parameter1);
+						shapes[i] = new Sphere(parameter1);
 						break;
 						
 					case 4:
@@ -60,7 +60,7 @@ public class Shape3DApp {
 						parameter1 = sc.nextInt();
 						System.out.println("Please enter the base.");
 						parameter2 = sc.nextInt();		
-						shapes[i] = new Triangle(parameter1,parameter2);
+						shapes[i] = new Cone(parameter1,parameter2);
 						break;
 						
 					default:
@@ -78,7 +78,7 @@ public class Shape3DApp {
 				if(calculate==1) 
 				{
 					for(int j=0; j<shapes.length;j++)
-					area = area + shapes[j].area3D2();
+					area = area + shapes[j].area();
 					System.out.println("The total area is " + area);
 				}
 				else

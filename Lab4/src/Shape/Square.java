@@ -15,7 +15,7 @@ public class Square implements Shape{
 	}
 	//Cube
 	public double area3D() {
-		return 4*Math.pow(edge, 2);
+		return 4*this.area();
 	}
 	//Cylinder
 	public double area3D2() {

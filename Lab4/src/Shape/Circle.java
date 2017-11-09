@@ -13,13 +13,16 @@ public class Circle implements Shape{
 	public double area() {
 		return Math.PI * Math.pow(radius, 2);
 	}
+	public double perimeter() {
+		return Math.PI * radius;
+	}
 	//Sphere
 	public double area3D() {
-		return 4*Math.PI * Math.pow(radius, 2);
+		return 4*this.area();
 	}
 	//Sphere
 	public double area3D2() {
-		return 4*Math.PI * Math.pow(radius, 2);
+		return 4*this.area();
 	}
 
 }
